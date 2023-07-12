@@ -15,6 +15,8 @@ import { FaMoon, FaSun } from 'react-icons/fa';
       top={'4'}
       right={'4'}
       zIndex={'overlay'}
+      // border={"2px"}
+      bgColor={'purple'}
       icon={<SwitchIcon />}
       {...props}
     />
