@@ -10,8 +10,9 @@ const Videoss = () => {
     'https://player.vimeo.com/progressive_redirect/playback/689925384/rendition/360p?loc=external&oauth2_token_id=1027659655&signature=5a819f11298d53cc1ed85837342f47ea61c8f95b9aeeb0c38edab72a80e0db78',
     'https://player.vimeo.com/progressive_redirect/playback/688648666/rendition/720p?loc=external&oauth2_token_id=1027659655&signature=070a16d4b244bc11c2bd17b03e04e50460be3d2726ed554959a49fc05dbd0281',
     'https://player.vimeo.com/progressive_redirect/playback/690770660/rendition/720p?loc=external&oauth2_token_id=1027659655&signature=3a048039957fd878fc72b809b9a0e5f2102eded879a83e00784ecd3ba5123614',
-    ]; 
-    const [videoSrc, setVideoSrc] = useState(videosArr[0])
+  ];
+  
+  const [videoSrc, setVideoSrc] = useState(videosArr[0]);
   return (
     <>
       <Stack direction={['column', 'row']} h={'100vh'}>
@@ -30,7 +31,8 @@ const Videoss = () => {
             w={'full'}
             overflowY={'auto'}
           >
-            <Heading>Sample Video 1</Heading>
+             
+            <Heading>Sample Video</Heading> 
             <Text>
               This is a sample video for testing and demo. This is a sample
               description of a video.
@@ -44,9 +46,15 @@ const Videoss = () => {
           spacing={'8'}
           overflowY={'auto'}
         >
-          <Button variant={'ghost'} colorScheme="purple">
-            Lecture 1 
-          </Button>
+          {videosArr.map((item, index) => (
+            <Button id='but'
+              variant={'ghost'}
+              colorScheme="purple"
+              onClick={() => setVideoSrc(item)}
+            >
+              Lecture {index + 1}
+            </Button>
+          ))}
         </VStack>
       </Stack>
     </>
