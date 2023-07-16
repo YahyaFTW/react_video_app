@@ -13,6 +13,7 @@ const Videoss = () => {
   ];
   
   const [videoSrc, setVideoSrc] = useState(videosArr[0]);
+  const[heading,setHeading]=useState(1);
   return (
     <>
       <Stack direction={['column', 'row']} h={'100vh'}>
@@ -32,7 +33,7 @@ const Videoss = () => {
             overflowY={'auto'}
           >
              
-            <Heading>Sample Video 1</Heading> 
+            <Heading>Sample Video {heading}</Heading> 
             <Text>
               This is a sample video for testing and demo. This is a sample
               description of a video.
@@ -50,7 +51,10 @@ const Videoss = () => {
             <Button id='but'
               variant={'ghost'}
               colorScheme="purple"
-              onClick={() => setVideoSrc(item)}
+              onClick={() => { setVideoSrc(item);
+                setHeading(index+1)
+                }}
+                // setVideoSrc(item)}
             >
               Lecture {index + 1}
             </Button>
