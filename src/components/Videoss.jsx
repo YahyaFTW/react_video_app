@@ -32,7 +32,7 @@ const Videoss = () => {
             overflowY={'auto'}
           >
              
-            <Heading>Sample Video</Heading> 
+            <Heading>Sample Video 1</Heading> 
             <Text>
               This is a sample video for testing and demo. This is a sample
               description of a video.
