@@ -78,29 +78,29 @@ const MyCarousel = () => (
     showArrows={false}
     showThumbs={false}
   >
-    <Box h={'100vh'} w={'full'}>
-      <Image src={img1} />
+    <Box h={['80%','100vh']} w={'full'}>
+      <Image src={img1} h={'full'} w={'full'} objectFit={'cover'}  />
       <Heading bgColor={'blackAlpha.700'} color={'white'} {...headingOptions}>
         Experience the future
       </Heading>
     </Box>
 
-    <Box h={'100vh'} w={'full'}>
-      <Image src={img2} />
+    <Box h={['80%','100vh']} w={'full'}>
+      <Image src={img2} h={'full'} w={'full'} objectFit={'cover'}  />
       <Heading bgColor={'whiteAlpha.700'} color={'black'} {...headingOptions}>
         Future is Gaming
       </Heading>
     </Box>
 
-    <Box h={'100vh'} w={'full'}>
-      <Image src={img3} />
+    <Box h={['80%','100vh']} w={'full'}>
+      <Image src={img3} h={'full'} w={'full'} objectFit={'cover'}  />
       <Heading bgColor={'whiteAlpha.600'} color={'black'} {...headingOptions}>
         Gaming is Cool
       </Heading>
     </Box>
 
-    <Box h={'100vh'} w={'full'}>
-      <Image src={img4} />
+    <Box h={['80%','100vh']} w={'full'}>
+      <Image src={img4} h={'full'} w={'full'} objectFit={'cover'}  />
       <Heading bgColor={'whiteAlpha.600'} color={'black'} {...headingOptions}>
         Cool is Night
       </Heading>
