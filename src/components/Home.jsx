@@ -15,7 +15,7 @@ const headingOptions = {
   textTransform: 'upperCase',
   transform: 'translate(-50%,-50%)',
   p: '4',
-  size: '4xl',
+  size: ['2xl','4xl'],
 };
 const Home = () => {
   return (
@@ -46,7 +46,12 @@ const Home = () => {
               filter={'hue-rotate(-130deg)'}
             />
 
-            <Text letterSpacing={'widest'} lineHeight={'190%'} p={['4','16']} textAlign={'center'}>
+            <Text
+              letterSpacing={'widest'}
+              lineHeight={'190%'}
+              p={['4', '16']}
+              textAlign={'center'}
+            >
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci
               dolore delectus veniam harum ex quaerat dolores pariatur soluta
               incidunt accusamus ipsum eos tempora inventore illo expedita,
@@ -70,41 +75,43 @@ const Home = () => {
   );
 };
 const MyCarousel = () => (
-  <Carousel
-    autoPlay
-    infiniteLoop
-    interval={1000}
-    showStatus={false}
-    showArrows={false}
-    showThumbs={false}
-  >
-    <Box h={['80%','100vh']} w={'full'}>
-      <Image src={img1} h={'full'} w={'full'} objectFit={'cover'}  />
-      <Heading bgColor={'blackAlpha.700'} color={'white'} {...headingOptions}>
-        Experience the future
-      </Heading>
-    </Box>
+  <>
+    <Carousel
+      autoPlay
+      infiniteLoop
+      interval={1000}
+      showStatus={false}
+      showArrows={false}
+      showThumbs={false}
+    >
+      <Box h={['80vh', '100vh']} w={'full'}>
+        <Image src={img1} h={'full'} w={'full'} objectFit={'cover'} />
+        <Heading bgColor={'blackAlpha.700'} color={'white'} {...headingOptions}>
+          Experience the future
+        </Heading>
+      </Box>
 
-    <Box h={['80%','100vh']} w={'full'}>
-      <Image src={img2} h={'full'} w={'full'} objectFit={'cover'}  />
-      <Heading bgColor={'whiteAlpha.700'} color={'black'} {...headingOptions}>
-        Future is Gaming
-      </Heading>
-    </Box>
+      <Box h={['80vh', '100vh']} w={'full'}>
+        <Image src={img2} h={'full'} w={'full'} objectFit={'cover'} />
+        <Heading bgColor={'whiteAlpha.700'} color={'black'} {...headingOptions}>
+          Future is Gaming
+        </Heading>
+      </Box>
 
-    <Box h={['80%','100vh']} w={'full'}>
-      <Image src={img3} h={'full'} w={'full'} objectFit={'cover'}  />
-      <Heading bgColor={'whiteAlpha.600'} color={'black'} {...headingOptions}>
-        Gaming is Cool
-      </Heading>
-    </Box>
+      <Box h={['80vh', '100vh']} w={'full'}>
+        <Image src={img3} h={'full'} w={'full'} objectFit={'cover'} />
+        <Heading bgColor={'whiteAlpha.600'} color={'black'} {...headingOptions}>
+          Gaming is Cool
+        </Heading>
+      </Box>
 
-    <Box h={['80%','100vh']} w={'full'}>
-      <Image src={img4} h={'full'} w={'full'} objectFit={'cover'}  />
-      <Heading bgColor={'whiteAlpha.600'} color={'black'} {...headingOptions}>
-        Cool is Night
-      </Heading>
-    </Box>
-  </Carousel>
+      <Box h={['80vh', '100vh']} w={'full'}>
+        <Image src={img4} h={'full'} w={'full'} objectFit={'cover'} />
+        <Heading bgColor={'whiteAlpha.600'} color={'black'} {...headingOptions}>
+          Cool is Night
+        </Heading>
+      </Box>
+    </Carousel>
+  </>
 );
 export default Home;
